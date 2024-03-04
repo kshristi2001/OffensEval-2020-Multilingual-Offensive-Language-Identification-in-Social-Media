@@ -23,7 +23,7 @@ Subtask C focuses on offense target identification, categorizing offensive posts
 
 ## Datasets
 
-OLID (Offensive Language Identification Dataset) Training Set (olid-training-v1.0.tsv):
+**OLID (Offensive Language Identification Dataset) Training Set (olid-training-v1.0.tsv):**
 
 The OLID dataset comprises 13,240 English tweets annotated using a hierarchical three-level annotation schema. This dataset includes tweets annotated for offensive language and categorized into three levels: A, B, and C. Level A identifies whether a tweet is offensive ('OFF') or not ('NOT'). Level B categorizes offensive tweets as targeting individuals ('TIN') or not ('UNT'). Level C focuses on identifying the target of offensive language, classifying it as Individual ('IND'), Group ('GRP'), or Other ('OTH').
 
@@ -31,25 +31,25 @@ Annotations in this dataset serve as the classes for constructing models for eac
 
 Link : https://sites.google.com/site/offensevalsharedtask/olid?authuser=0
 
-Test Sets from OLID:
+**Test Sets from OLID:**
 
-Subtask A Test Set: Comprised of testset-levela.tsv and labels-levela.csv, containing 860 tweets labeled as 'OFF' or 'NOT'.
+* *Subtask A Test Set:*  Comprised of testset-levela.tsv and labels-levela.csv, containing 860 tweets labeled as 'OFF' or 'NOT'.
 
-Subtask B Test Set: Consists of testset-levelb.tsv and labels-levelb.csv, including 240 tweets labeled as 'TIN' or 'UNT'.
+* *Subtask B Test Set:*  Consists of testset-levelb.tsv and labels-levelb.csv, including 240 tweets labeled as 'TIN' or 'UNT'.
 
-Subtask C Test Set: Includes testset-levelc.tsv and labels-levelc.csv, containing 213 tweets labeled as 'OTH', 'GRP', or ‘IND’. These tweets are utilized to evaluate models for identifying the target of offensive language.
+* *Subtask C Test Set:*  Includes testset-levelc.tsv and labels-levelc.csv, containing 213 tweets labeled as 'OTH', 'GRP', or ‘IND’. These tweets are utilized to evaluate models for identifying the target of offensive language.
 
-Test Sets from SOLID (Semi-Supervised Offensive Language Identification Dataset):
+**Test Sets from SOLID (Semi-Supervised Offensive Language Identification Dataset):**
 
-Level A Test Sets:
+* *Level A Test Sets:* 
 test_a_tweets.tsv and test_a_labels.csv: 3,887 tweets labeled for subtask A.
 test_a_tweets_all.tsv with test_a_labels_easy.csv and test_a_labels_hard.csv: An extended set of 5,995 tweets for subtask A.
 
-Level B Test Sets:
+* *Level B Test Sets:* 
 test_b_tweets.tsv and test_b_labels.csv: 1,422 tweets labeled for subtask B.
 test_b_tweets_all.tsv with test_b_labels_easy.csv and test_b_labels_hard.csv: An extended set of 3,003 tweets for subtask B.
 
-Level C Test Sets:
+* *Level C Test Sets:* 
 test_c_tweets.tsv and test_c_labels.csv: 850 tweets labeled for subtask C.
 test_c_tweets_all.tsv with test_c_labels_easy.csv and test_c_labels_hard.csv: An extended set of 1,547 tweets for subtask C.
 
@@ -58,7 +58,7 @@ These test sets from SOLID are utilized to evaluate the performance of models de
 Link : https://sites.google.com/site/offensevalsharedtask/solid?authuser=0
 ## Results and Evaluation 
 
-SubTask A:
+**SubTask A:**
 
 The LSTM model implemented for subtask A demonstrates varying levels of performance across different test datasets. In the OLID Test Set A, the model shows moderate performance, while it exhibits robust performance in the SOLID Test Set A. Particularly noteworthy is the model's exceptional performance in the SOLID Extended Easy subset, where it achieves outstanding precision, recall, and F1-Score. Despite encountering more challenging instances in the SOLID Extended Hard subset, the model maintains good performance levels. These findings highlight the effectiveness and adaptability of the LSTM model in identifying offensive language across diverse datasets.
 
@@ -70,7 +70,7 @@ The LSTM model implemented for subtask A demonstrates varying levels of performa
   </tr>
 </table>
 
-SubTask B:
+**SubTask B:**
 
 Subtask B, aimed at categorizing offensive language into Targeted Insults and Threats (TIN) and Untargeted (UNT) profanity, showcased exceptional performance on the OLID dataset, with high precision and recall values indicating the model's accuracy in identifying offensive content. The robust F1-scores for both TIN and UNT classes underscored the model's balance between precision and recall, contributing to its overall effectiveness in classifying offensive language. The model's satisfactory accuracy on the OLID dataset, coupled with comparable results on the SOLID dataset, highlights its robustness and generalizability across diverse datasets, emphasizing its utility in creating safer online environments by accurately categorizing offensive language.
 
@@ -82,7 +82,7 @@ Subtask B, aimed at categorizing offensive language into Targeted Insults and Th
   </tr>
 </table>
 
-SubTask C:
+**SubTask C:**
 
 Upon implementing the Support Vector Machine (SVM) algorithm for subtask C, the model exhibited promising performance across multiple datasets. When evaluated on the OLID dataset, the SVM model achieved satisfactory accuracy. A confusion matrix provided insights into the model's performance across different categories, while a classification report highlighted its precision, recall, and F1-score for each category, indicating the model's ability to correctly classify offensive targets. Additionally, word clouds were generated to illustrate the frequency of words associated with each category in the OLID dataset. Furthermore, the model's performance was assessed on the SOLID dataset, where it demonstrated improved accuracy. Sampling predictions from the SOLID data showcased instances of accurate predictions and misclassifications. Overall, the SVM model showed effectiveness in identifying offensive targets across diverse datasets, as evidenced by its performance metrics.
 
